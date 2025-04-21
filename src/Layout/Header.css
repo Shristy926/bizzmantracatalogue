@@ -1,0 +1,12 @@
+/* Header.css */
+
+.custom-header {
+  background-color: transparent !important;
+  box-shadow: none;
+  border: none;
+  position: absolute; /* So it overlaps the homepage */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* So it stays above content */
+}
