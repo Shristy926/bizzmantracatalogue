@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../Layout/Layout";
-import "./Home.css"; // Import your CSS file
+import "./Home.css"; 
 import Teltonika from "../assets/Teltonika.png";
 import BFlux from '../assets/BFlux.jpg'
 import APMKingstrack from '../assets/APMKingstrack.png'
@@ -24,7 +24,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section
         className="py-5"
         style={{
