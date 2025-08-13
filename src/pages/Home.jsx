@@ -14,7 +14,7 @@ import UFFIZIO from '../assets/UFFIZIO.png'
 export default function Home() {
   return (
     <Layout>
-      <section className="background">
+      <section className="background-slider">
         <div className="hero-overlay">
           <div className="container text-white">
             <h1 className="display-4">Welcome to Bizzmantra</h1>

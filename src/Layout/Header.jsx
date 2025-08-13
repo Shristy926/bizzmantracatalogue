@@ -26,7 +26,6 @@ export const Header = () => {
             className="img-fluid rounded me-2"
             style={{ height: "40px" }}
           />
-          {/* BizzMantra */}
         </NavLink>
 
         {/* Toggle for mobile */}
