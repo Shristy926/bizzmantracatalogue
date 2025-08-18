@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./Header.css";
 import logo from "../assets/logo.png";
 
-export const Header = () => {
+const Header = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -54,7 +54,8 @@ export const Header = () => {
               <NavLink className="nav-link text-white" to="/industries">Industries</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/Clients">Our Clients</NavLink>
+              <NavLink className="nav-link text-white" to="/our-clients">Our Clients</NavLink>
+
             </li>
             <li className="nav-item">
               <NavLink className="nav-link text-white" to="/contact">Contact</NavLink>
@@ -65,3 +66,4 @@ export const Header = () => {
     </nav>
   );
 };
+export default Header;

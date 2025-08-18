@@ -1,4 +1,7 @@
-.active{
-  border-bottom: 2px solid gray !important;
-  font-weight: 700;
+html, body, #root {
+  height: 100%;
+}
+
+main {
+  flex: 1; /* This pushes footer down */
 }

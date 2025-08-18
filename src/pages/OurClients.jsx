@@ -18,6 +18,7 @@ import Himt from "../assets/Himt.jpg";
 import JhansiSmartCity from "../assets/JhansiSmartCity.jpg";
 import patnacorporation from "../assets/patnacorporation.jpg";
 import ShaktiLogistics from "../assets/ShaktiLogistics.png";
+import "./OurClients.css";
 export default function OurClients() {
   return (
     <Layout>

@@ -1,0 +1,51 @@
+.ourclients {
+    background-image: url('../assets/ourclients.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 500px; 
+    width:100%
+
+  }
+  .clients {
+    background-color: rgba(0, 0, 0, 0.6); /* Optional overlay */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .client-logo {
+    width: 100px;       /* fixed width */
+    height: 60px;       /* fixed height */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  @media (max-width: 576px) {
+    .client-logo {
+      width: 80px;
+      height: 50px;
+    }
+  }
+    
+  .clients-section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    max-height: 80px; /* Adjust height to keep all logos balanced */
+    transition: transform 0.3s ease;
+  }
+  
+  .clients-section img:hover {
+    transform: scale(1.05);
+  }
+  
+  .clients-section .row {
+    row-gap: 2rem;
+    column-gap: 1rem;
+  }
+  

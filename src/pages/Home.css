@@ -1,41 +1,12 @@
-.background-slider
- {
-    width: 100%;
-    height: 500px;
-    background-image: url('../assets/home.jpeg');
-    background-image: url('../assets/slide.jpeg');
-    background-size: cover;
-    background-position: center;
-    animation: slide 25s infinite;
-  }
+.hero-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* full height of section */
+  text-align: center;
+}
+
   
- 
-  .hero-overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-    height: 100%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  
-  .aboutusbackground
- {
-    width: 100%;
-    height: 500px;
-    background-image: url('../assets/silhouettes-modern-background_1048-3022.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .about {
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
   .Industry
   {
      width: 100%;

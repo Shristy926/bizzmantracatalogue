@@ -9,6 +9,7 @@ import Passenger from '../assets/Passenger.jpg'
 import Transportation from'../assets/Transportation.jpg' 
 import Chain from '../assets/Chain.jpg'
 import Ecommerce from '../assets/Ecommerce.jpg'
+import "./Home.css"; 
 
 export default function Industries() {
   return (
