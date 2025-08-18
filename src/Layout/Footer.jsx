@@ -1,5 +1,5 @@
 import './Footer.css';
-import { FaClock, FaHeadphonesAlt, FaEnvelope } from "react-icons/fa";
+import { FaClock, FaHeadphonesAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { BsChevronRight } from "react-icons/bs";
 import logo from "../assets/logo.png";
 
@@ -8,38 +8,26 @@ export default function Footer() {
     <footer 
       className="footer text-white pt-5 pb-3"
       style={{
-        background: "linear-gradient(135deg, #0f172a, #1e293b)", // Navy gradient
+        background: "linear-gradient(90deg, #2a4a7b, #3f6db5)", // same as header
         color: "#f8fafc"
       }}
     >
       <div className="container">
         <div className="row gy-4">
 
-          {/* Column 1 - Logo + About */}
+          {/* Column 1 - Logo + Short Info */}
           <div className="col-12 col-md-6 col-lg-3">
             <img src={logo} alt="BizzMantra Logo" className="mb-3" style={{ maxWidth: "160px" }} />
             <p className="small" style={{ color: "#cbd5e1" }}>
-              A young company based in Chennai (India), owned and managed by Technopreneurs who have a good amount of experience in Information Technology, Management and IoT Services.
+              Empowering businesses with technology, IoT solutions, and IT expertise to help you grow smarter and faster.
             </p>
           </div>
 
-          {/* Column 2 - Contact Info */}
+          {/* Column 2 - Quick Links */}
           <div className="col-12 col-md-6 col-lg-3">
-            <h5 style={{ color: "#fbbf24" }}>Contact Us</h5>
+            <h5 style={{ color: "#fbbf24" }}>Quick Links</h5>
             <ul className="list-unstyled small mt-3">
-              <li className="mb-2"><FaClock className="me-2" style={{ color: "#fbbf24" }} /> Mon - Sat / 10AM - 7PM</li>
-              <li className="mb-2"><FaHeadphonesAlt className="me-2" style={{ color: "#fbbf24" }} /> +91-8929553711</li>
-              <li><FaEnvelope className="me-2" style={{ color: "#fbbf24" }} /> bizzmantra@outlook.com</li>
-              <li><FaEnvelope className="me-2" style={{ color: "#fbbf24" }} /> support@bizzmantra.com</li>
-              <li><FaEnvelope className="me-2" style={{ color: "#fbbf24" }} /> sales@bizzmantra.com</li>
-            </ul>
-          </div>
-
-          {/* Column 3 - Links */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <h5 style={{ color: "#fbbf24" }}>Links</h5>
-            <ul className="list-unstyled small mt-3">
-              {["Home", "About", "Industries", "Contact", "Term & Condition"].map((link, idx) => (
+              {["Home", "About Us", "Services", "Industries", "Contact"].map((link, idx) => (
                 <li key={idx} className="mb-2">
                   <BsChevronRight className="me-2" style={{ color: "#fbbf24" }} /> 
                   <a 
@@ -59,11 +47,22 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Column 3 - Contact Info */}
+          <div className="col-12 col-md-6 col-lg-3">
+            <h5 style={{ color: "#fbbf24" }}>Get in Touch</h5>
+            <ul className="list-unstyled small mt-3">
+              <li className="mb-2"><FaMapMarkerAlt className="me-2" style={{ color: "#fbbf24" }} /> Chennai, India</li>
+              <li className="mb-2"><FaClock className="me-2" style={{ color: "#fbbf24" }} /> Mon - Sat / 10AM - 7PM</li>
+              <li className="mb-2"><FaHeadphonesAlt className="me-2" style={{ color: "#fbbf24" }} /> +91-8929553711</li>
+              <li><FaEnvelope className="me-2" style={{ color: "#fbbf24" }} /> support@bizzmantra.com</li>
+            </ul>
+          </div>
+
           {/* Column 4 - Newsletter */}
           <div className="col-12 col-md-6 col-lg-3">
             <h5 style={{ color: "#fbbf24" }}>Newsletter</h5>
             <p className="small mt-3" style={{ color: "#cbd5e1" }}>
-              Many aspects of computing and technology and the term is more recognizable than before.
+              Stay updated with the latest news, insights and tech trends from us.
             </p>
             <input 
               type="email" 

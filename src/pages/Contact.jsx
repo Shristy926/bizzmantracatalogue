@@ -1,17 +1,16 @@
 import React from 'react';
 import Layout from '../Layout/Layout';
 import "./Home.css";
+import hero1 from '../assets/contact.jpeg';
+import hero2 from '../assets/contactus.jpeg';
 
 export default function Contact() {
   return (
-    <Layout>
-      {/* Header */}
-      <section className="bg-dark text-white py-5">
-        <div className="container text-center">
-          <h1 className="display-4">Contact Us</h1>
-          <p className="lead">We'd love to hear from you. Get in touch with us!</p>
-        </div>
-      </section>
+    <Layout
+              pageTitle="Contact Us"
+          pageSubtitle="We'd love to hear from you. Get in touch with us!"
+          bgImages={[hero1, hero2]}
+            >
 
       {/* Contact Form & Info */}
       <section className="py-5">

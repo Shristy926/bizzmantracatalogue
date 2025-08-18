@@ -9,19 +9,17 @@ import Passenger from '../assets/Passenger.jpg'
 import Transportation from'../assets/Transportation.jpg' 
 import Chain from '../assets/Chain.jpg'
 import Ecommerce from '../assets/Ecommerce.jpg'
+import hero1 from '../assets/industries.jpeg';
+import hero2 from '../assets/industry.jpeg';
 import "./Home.css"; 
 
 export default function Industries() {
   return (
-    <Layout>
-      <section className="Industry">
-        <div className="serve">
-          <div className="container text-center">
-            <h1 className="display-4">Industries We Serve</h1>
-          </div>
-        </div>
-      </section>
-
+    <Layout
+          pageTitle="Industries We Serve"
+      pageSubtitle="Smart Fleet Management Solutions for Modern Businesses"      
+      bgImages={[hero1, hero2]} 
+        >
       {/* Industries Cards Section */}
       <section className="industries-section">
         <div className="industry-wrapper">

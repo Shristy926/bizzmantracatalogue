@@ -4,12 +4,12 @@ import fleet from "../assets/fleet.jpeg";
 import "./about.css";
 
 export default function About() {
-  return ( 
-  <Layout
+  return (
+    <Layout
       pageTitle="About Us"
       pageSubtitle="Smart Fleet Management Solutions for Modern Businesses"
     >
-      {/* About Content Section */}
+      {/* About Section */}
       <section className="py-5">
         <div className="container">
           <div className="row align-items-center">
@@ -17,61 +17,102 @@ export default function About() {
               <img
                 src={fleet}
                 alt="Fleet Management"
-                className="img-fluid rounded"
+                className="img-fluid rounded shadow"
                 style={{ height: "300px", width: "400px", objectFit: "cover" }}
               />
             </div>
             <div className="col-md-6">
+              <h2>Who We Are</h2>
               <p>
-                Bizzmantra is an end-to-end solution provider...
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Content Section */}
-      <section className="py-5">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-6 mb-4 mb-md-0 text-center">
-              <img
-                src={fleet}
-                alt="Fleet Management"
-                className="img-fluid rounded"
-                style={{ height: "300px", width: "400px", objectFit: "cover" }}
-              />
-            </div>
-            <div className="col-md-6">
-              <p>
-                Bizzmantra is an end-to-end solution provider. With our
-                expertise in Software Development, Fleet Management, Solar and
-                renewable energy solutions, Industrial IoT solutions, Hardware,
-                Machinery, GPS tracking systems, RFID Solutions, and more, we
-                provide a complete tech-enabled ecosystem to ensure smooth
-                operations.
+                Bizzmantra is an end-to-end technology solutions provider. With
+                expertise in Software Development, Fleet Management, Renewable
+                Energy Solutions, Industrial IoT, GPS Tracking, and RFID, we
+                deliver a complete tech-enabled ecosystem to ensure smooth
+                operations for businesses.
               </p>
               <p>
                 Established in 2012, Bizzmantra is ISO 9001:2015 certified and
-                offers robust GPS hardware along with web and mobile platforms
-                to efficiently manage vehicles or entire fleets.
+                offers robust GPS hardware along with scalable web and mobile
+                platforms to manage vehicles and fleets effectively.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission & Vision Section */}
       <section className="bg-light py-5">
         <div className="container text-center">
-          <h2>Our Mission</h2>
-          <p className="lead">
-            Our mission is to provide cost savings, security, and operational
-            optimization for vehicle fleets by delivering innovative and
-            complete solutions across different industries.
-          </p>
+          <h2 className="mb-4">Our Mission & Vision</h2>
+          <div className="row">
+            <div className="col-md-6">
+              <h4>Our Mission</h4>
+              <p>
+                To provide cost savings, security, and operational optimization
+                for vehicle fleets by delivering innovative and complete
+                solutions across different industries.
+              </p>
+            </div>
+            <div className="col-md-6">
+              <h4>Our Vision</h4>
+              <p>
+                To become a global leader in fleet management and IoT-driven
+                solutions, enabling businesses to thrive with smart, connected,
+                and sustainable technologies.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-    </Layout>
+
+      {/* Core Values Section */}
+      <section className="py-5">
+        <div className="container text-center">
+          <h2 className="mb-4">Our Core Values</h2>
+          <div className="row">
+            {[
+              "Innovation",
+              "Integrity",
+              "Customer Satisfaction",
+              "Reliability",
+              "Sustainability",
+            ].map((value, index) => (
+              <div className="col-md-4 mb-4" key={index}>
+                <div className="p-4 shadow rounded bg-white h-100">
+                  <h5>{value}</h5>
+                  <p>
+                    We believe in {value.toLowerCase()} as a foundation of our
+                    services to deliver the best to our customers.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="bg-light py-5">
+        <div className="container text-center">
+          <h2 className="mb-4">Why Choose Us?</h2>
+          <div className="row">
+            {[
+              "10+ Years of Industry Experience",
+              "ISO 9001:2015 Certified",
+              "Trusted by Leading Enterprises",
+              "Complete End-to-End Solutions",
+              "Innovative Technology Ecosystem",
+              "24/7 Customer Support",
+            ].map((point, i) => (
+              <div className="col-md-4 mb-4" key={i}>
+                <div className="p-3 rounded shadow-sm bg-white">
+                  <p>{point}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+          </Layout>
   );
 }

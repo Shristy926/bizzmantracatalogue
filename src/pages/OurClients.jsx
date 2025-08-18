@@ -18,18 +18,16 @@ import Himt from "../assets/Himt.jpg";
 import JhansiSmartCity from "../assets/JhansiSmartCity.jpg";
 import patnacorporation from "../assets/patnacorporation.jpg";
 import ShaktiLogistics from "../assets/ShaktiLogistics.png";
+import hero1 from "../assets/ourclient.jpeg";
+import hero2 from "../assets/ourclients.jpg";
 import "./OurClients.css";
 export default function OurClients() {
   return (
-    <Layout>
-      <section className="ourclients">
-        <div className="clients">
-          <div className="container text-white">
-            <h1 className="display-4">Our Valuable Clients</h1>
-            <p className="lead">Together, We Innovate. Together, We Thrive.</p>
-          </div>
-        </div>
-      </section>
+    <Layout
+              pageTitle="Our Clients"
+          pageSubtitle="Trusted by leading businesses worldwide"      
+          bgImages={[hero1, hero2]} 
+            >
 
       <section className="clients-section">
         <div className="container text-center">
