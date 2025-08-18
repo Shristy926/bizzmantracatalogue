@@ -2,12 +2,15 @@ import React from "react";
 import Layout from "../Layout/Layout";
 import fleet from "../assets/fleet.jpeg";
 import "./about.css";
+import hero1 from "../assets/about-us.jpg";
+import hero2 from "../assets/about1.jpg";
 
 export default function About() {
   return (
     <Layout
-      pageTitle="About Us"
-      pageSubtitle="Smart Fleet Management Solutions for Modern Businesses"
+          pageTitle="About Us"
+      pageSubtitle="We are passionate about delivering smart fleet management solutions that empower businesses to grow."
+      bgImages={[hero1, hero2]}
     >
       {/* About Section */}
       <section className="py-5">
@@ -113,6 +116,6 @@ export default function About() {
           </div>
         </div>
       </section>
-          </Layout>
+    </Layout>
   );
 }
