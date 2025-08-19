@@ -8,10 +8,11 @@ import hero2 from "../assets/about1.jpg";
 export default function About() {
   return (
     <Layout
-          pageTitle="About Us"
-      pageSubtitle="We are passionate about delivering smart fleet management solutions that empower businesses to grow."
-      bgImages={[hero1, hero2]}
-    >
+  slides={[
+    { bgImages: hero1, pageTitle: "About Us", pageSubtitle: "We are passionate about delivering smart fleet management solutions that empower businesses to grow." },
+    { bgImages: hero2, pageTitle: "About Us", pageSubtitle: "We are passionate about delivering smart fleet management solutions that empower businesses to grow." }
+  ]}
+>
       {/* About Section */}
       <section className="py-5">
         <div className="container">

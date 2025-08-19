@@ -16,10 +16,20 @@ import "./Home.css";
 export default function Industries() {
   return (
     <Layout
-          pageTitle="Industries We Serve"
-      pageSubtitle="Smart Fleet Management Solutions for Modern Businesses"      
-      bgImages={[hero1, hero2]} 
-        >
+  slides={[
+    {
+      bgImages: hero1,
+      pageTitle: "Industries We Serve",
+      pageSubtitle: "Smart Fleet Management Solutions for Modern Businesses",
+    },
+    {
+      bgImages: hero2,
+      pageTitle: "Industries We Serve",
+      pageSubtitle: "Optimizing operations across diverse industries with fleet intelligence.",
+    }
+  ]}
+>
+
       {/* Industries Cards Section */}
       <section className="industries-section">
         <div className="industry-wrapper">

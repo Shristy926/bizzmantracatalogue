@@ -7,10 +7,19 @@ import hero2 from '../assets/contactus.jpeg';
 export default function Contact() {
   return (
     <Layout
-              pageTitle="Contact Us"
-          pageSubtitle="We'd love to hear from you. Get in touch with us!"
-          bgImages={[hero1, hero2]}
-            >
+  slides={[
+    {
+      bgImages: hero1,
+      pageTitle: "Contact Us",
+      pageSubtitle: "We'd love to hear from you. Get in touch with us!",
+    },
+    {
+      bgImages: hero2,
+      pageTitle: "Contact Us",
+      pageSubtitle: "Our team is here to answer your queries and support you.",
+    }
+  ]}
+>
 
       {/* Contact Form & Info */}
       <section className="py-5">

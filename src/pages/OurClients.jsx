@@ -24,10 +24,20 @@ import "./OurClients.css";
 export default function OurClients() {
   return (
     <Layout
-              pageTitle="Our Clients"
-          pageSubtitle="Trusted by leading businesses worldwide"      
-          bgImages={[hero1, hero2]} 
-            >
+  slides={[
+    {
+      bgImages: hero1,
+      pageTitle: "Our Clients",
+      pageSubtitle: "Trusted by leading businesses worldwide",
+    },
+    {
+      bgImages: hero2,
+      pageTitle: "Our Clients",
+      pageSubtitle: "Delivering fleet management excellence across industries.",
+    }
+  ]}
+>
+
 
       <section className="clients-section">
         <div className="container text-center">

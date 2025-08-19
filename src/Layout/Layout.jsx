@@ -3,32 +3,28 @@ import homeBg from "../assets/home.jpeg";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function Layout({ children, pageTitle, pageSubtitle, bgImages }) {
-  console.log("Layout props:", pageTitle, pageSubtitle);
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = bgImages?.length ? bgImages : [homeBg];
+export default function Layout({ slides = [], children }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (images.length > 1) {
+    if (slides.length > 1) {
       const interval = setInterval(() => {
-        setCurrentImageIndex((prev) => (prev + 1) % images.length);
-      }, 5000);
+        setCurrentIndex((prev) => (prev + 1) % slides.length);
+      }, 3000);
       return () => clearInterval(interval);
     }
-  }, [images]);
+  }, [slides]);
+
+  const currentSlide = slides[currentIndex];
 
   return (
     <>
-      {/* Navbar */}
       <Header />
-
-      {/* Hero Section */}
       <section
         style={{
           position: "relative",
-          height: "50vh",
-          backgroundImage: `url(${images[currentImageIndex]})`,
+          height: "100vh",
+          backgroundImage: `url(${currentSlide?.bgImages})`,
           backgroundSize: "cover",
           backgroundPosition: "center center",
         }}
@@ -41,7 +37,7 @@ export default function Layout({ children, pageTitle, pageSubtitle, bgImages }) 
             backgroundColor: "rgba(0,0,0,0.6)",
             zIndex: 1,
           }}
-        ></div>
+        />
 
         {/* Title & Subtitle */}
         <div
@@ -50,19 +46,16 @@ export default function Layout({ children, pageTitle, pageSubtitle, bgImages }) 
             zIndex: 2,
             color: "#fff",
             textAlign: "center",
-            paddingTop: "20vh",
+            paddingTop: "40vh",
             textShadow: "2px 2px 8px rgba(0, 0, 0, 0.8)",
           }}
         >
-          <h1>{pageTitle}</h1>
-          {pageSubtitle && <p>{pageSubtitle}</p>}
+          <h1>{currentSlide?.pageTitle}</h1>
+          {currentSlide?.pageSubtitle && <p>{currentSlide.pageSubtitle}</p>}
         </div>
       </section>
 
-      {/* Main Content */}
       <main style={{ padding: "20px" }}>{children}</main>
-
-      {/* Footer */}
       <Footer />
     </>
   );
