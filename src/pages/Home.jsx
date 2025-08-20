@@ -76,18 +76,14 @@ export default function Home() {
       {cards.map((card, index) => (
         <div className="col-md-4 mb-4" key={index}>
           <div className="p-4 shadow rounded bg-white h-100">
-            {/* Image */}
             <img
               src={card.Images}
               alt={card.title}
               className="img-fluid mb-3"
               style={{ height: "150px", objectFit: "contain" }}
             />
-
-            {/* Title */}
             <h5>{card.title}</h5>
 
-            {/* Description */}
             <p>{card.description}</p>
           </div>
         </div>

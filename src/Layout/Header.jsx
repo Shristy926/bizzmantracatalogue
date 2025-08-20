@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Header.css";
-import logo from "../assets/logo.png";
+import bizzMantraLogo from "../assets/bizzMantralogo.jpg";
 
 const Header = () => {
   const [user, setUser] = useState(null);
@@ -27,8 +27,8 @@ const Header = () => {
           to={user?.id ? "/dashboard" : "/"}
         >
           <img
-            src={logo}
-            alt="BizzMantra Logo"
+            src={bizzMantraLogo}
+            alt="bizzMantraLogo"
             className="img-fluid rounded me-2"
             style={{ height: "40px" }}
           />

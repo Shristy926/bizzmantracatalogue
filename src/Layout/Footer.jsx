@@ -1,7 +1,7 @@
 import './Footer.css';
 import { FaClock, FaHeadphonesAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { BsChevronRight } from "react-icons/bs";
-import logo from "../assets/logo.png";
+import bizzMantraLogo from "../assets/bizzMantralogo.jpg";
 
 export default function Footer() {
   return (
@@ -17,7 +17,7 @@ export default function Footer() {
 
           {/* Column 1 - Logo + Short Info */}
           <div className="col-12 col-md-6 col-lg-3">
-            <img src={logo} alt="BizzMantra Logo" className="mb-3" style={{ maxWidth: "160px" }} />
+            <img src={bizzMantraLogo} alt="bizzMantraLogo" className="mb-3" style={{ maxWidth: "160px" }} />
             <p className="small" style={{ color: "#cbd5e1" }}>
               Empowering businesses with technology, IoT solutions, and IT expertise to help you grow smarter and faster.
             </p>
