@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Header.css";
-import logo from "../assets/logo.png";
+import bizzMantraLogo from "../assets/bizzMantralogo.jpg";
 
-export const Header = () => {
+const Header = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -14,21 +14,26 @@ export const Header = () => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg custom-header">
+    <nav
+      className="navbar navbar-expand-lg fixed-top"
+      style={{
+        background: "transparent", 
+        zIndex: 50,
+      }}
+    >
       <div className="container-fluid">
         <NavLink
           className="navbar-brand d-flex align-items-center text-white fw-bold"
           to={user?.id ? "/dashboard" : "/"}
         >
           <img
-            src={logo}
-            alt="BizzMantra Logo"
+            src={bizzMantraLogo}
+            alt="bizzMantraLogo"
             className="img-fluid rounded me-2"
             style={{ height: "40px" }}
           />
         </NavLink>
 
-        {/* Toggle for mobile */}
         <button
           className="navbar-toggler"
           type="button"
@@ -40,24 +45,35 @@ export const Header = () => {
         >
           <span className="navbar-toggler-icon" />
         </button>
-
-        {/* Center: Navigation Links */}
-        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul className="navbar-nav mb-2 mb-lg-0">
-            <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/">Home</NavLink>
+        <div
+          className="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav m-2 mb-4 mb-lg-0 ms-auto">
+            <li className="nav-item mx-3">
+              <NavLink className="nav-link text-white" to="/">
+                Home
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/about">About</NavLink>
+            <li className="nav-item mx-3">
+              <NavLink className="nav-link text-white" to="/about">
+                About
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/industries">Industries</NavLink>
+            <li className="nav-item mx-3">
+              <NavLink className="nav-link text-white" to="/industries">
+                Industries
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/Clients">Our Clients</NavLink>
+            <li className="nav-item mx-3">
+              <NavLink className="nav-link text-white" to="/our-clients">
+                Our Clients
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/contact">Contact</NavLink>
+            <li className="nav-item mx-3">
+              <NavLink className="nav-link text-white" to="/contact">
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -65,3 +81,4 @@ export const Header = () => {
     </nav>
   );
 };
+export default Header;
